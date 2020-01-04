@@ -10,6 +10,7 @@
   "author": "Matt Mazzola <mattmazzola@live.com> (https://github.com/mattmazzola)",
   "license": "MIT",
   "dependencies": {
+    "cra-package": "file:../cra-package/package/cra-package-0.1.0.tgz",
     "express": "^4.17.1",
     "typescript": "^3.7.4"
   },
