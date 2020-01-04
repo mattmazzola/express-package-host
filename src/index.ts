@@ -1,9 +1,13 @@
 import express from 'express'
-import path from 'path'
+import * as ui from 'cra-package'
 
 const app = express()
-app.use(express.static(path.join(__dirname, 'build')))
+
+app.use(express.static(ui.directoryPath))
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'))
+    res.sendFile(ui.defaultFilePath)
 })
-app.listen(9000)
+
+app.listen(9000, () => {
+    console.log(`Server started on http://localhost:9000`)
+})
